@@ -5,6 +5,6 @@ Simple_shell
 
 Contributers :
 
-Ahmedkel
+Ahmed KELLOUCH
 
 Youssef-ait-elmahi
