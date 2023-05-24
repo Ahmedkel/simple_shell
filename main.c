@@ -36,7 +36,7 @@ int main(void)
 		if (_strcmp(input, "exit\n") == 0)
 		{
 			free(input);
-			exit(0);
+			_exit(0);
 		}
 		run_cmd(input);
 		free(input);
