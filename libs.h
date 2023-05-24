@@ -14,7 +14,7 @@ extern char **environ;
 #include <stdarg.h>
 #include <errno.h>
 #include <sys/stat.h>
-
+#include <limits.h>
 
 void prompt(void);
 void read_input(char *input);
@@ -34,5 +34,13 @@ int run_cmd(char *line);
 char *_strdup(char *str);
 int cmd_helper(char **pathsp, char **splitted);
 void free_2d_array(char **ptr);
+
+int _printf(const char *format, ...);
+int _putchar(char c);
+int _print_string(char *s);
+int _strlen(char *s);
+int _strlenc(const char *s);
+int _print_int(int num);
+int _print_unsigned_int(unsigned int num);
 
 #endif

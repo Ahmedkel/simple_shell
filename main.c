@@ -19,7 +19,6 @@ int main(void)
 		characters = getline(&input, &bufsize, stdin);
 		if (characters == -1)
 		{
-			write(1, "\n", 1);
 			exit(0);
 		}
 		if (!*(input + 1))

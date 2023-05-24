@@ -25,7 +25,7 @@ int cmd_helper(char **pathsp, char **splitted)
 		i++;
 		free(full_cmd);
 	}
-		write(2, "command not found\n", 19);
+	/*_printf("sh: %d: %s: not found", ,input);*/
 	free_2d_array(pathsp);
 	free_2d_array(splitted);
 	return (EXIT_FAILURE);
