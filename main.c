@@ -36,7 +36,7 @@ int main(void)
 		{
 			free(input);
 			free(args[0]);
-			exit(exit_status(0,0));
+			exit(exit_status(0, 0));
 		}
 		free(args[0]);
 		run_cmd(input);
@@ -44,5 +44,5 @@ int main(void)
 		input = NULL;
 		bufsize = 0;
 	}
-	return (exit_status(0,0));
+	return (exit_status(0, 0));
 }
