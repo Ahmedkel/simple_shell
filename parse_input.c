@@ -37,5 +37,4 @@ void parse_input(char *input, char **args)
 	}
 	args[i] = NULL;
 	free(s);
-    
 }

@@ -35,12 +35,14 @@ int main(void)
 		if (_strcmp(args[0], "exit") == 0)
 		{
 			free(input);
-			_exit(0);
+			free(args[0]);
+			exit(exit_status(0,0));
 		}
+		free(args[0]);
 		run_cmd(input);
 		free(input);
 		input = NULL;
 		bufsize = 0;
 	}
-	return (0);
+	return (exit_status(0,0));
 }

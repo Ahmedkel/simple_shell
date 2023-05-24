@@ -31,5 +31,6 @@ void execute_command(char *command, char **args)
 				perror("waitpid");
 				exit(1);
 			}
+			exit_status(1, WEXITSTATUS(status));
 	}
 }

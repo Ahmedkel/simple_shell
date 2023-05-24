@@ -34,6 +34,7 @@ int run_cmd(char *line);
 char *_strdup(char *str);
 int cmd_helper(char **pathsp, char **splitted);
 void free_2d_array(char **ptr);
+int exit_status(int action, int new_status);
 
 int _printf(const char *format, ...);
 int _putchar(char c);
