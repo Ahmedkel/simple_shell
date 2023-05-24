@@ -29,7 +29,7 @@ void parse_input(char *input, char **args)
 		args[0] = NULL;
 		return;
 	}
-	args[i] = strtok(input, "\t \n");
+	args[i] = strdup(strtok(input, "\t \n"));
 	while (args[i] != NULL && i < MAX_ARGS - 1)
 	{
 		i++;
@@ -37,4 +37,5 @@ void parse_input(char *input, char **args)
 	}
 	args[i] = NULL;
 	free(s);
+    
 }

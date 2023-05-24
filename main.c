@@ -32,7 +32,7 @@ int main(void)
 			free(input);
 			continue;
 		}
-		if (_strcmp(input, "exit\n") == 0)
+		if (_strcmp(args[0], "exit") == 0)
 		{
 			free(input);
 			_exit(0);
