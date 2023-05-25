@@ -35,6 +35,7 @@ int cmd_helper(char **pathsp, char **splitted);
 void free_2d_array(char **ptr);
 int exit_status(int action, int new_status);
 void my_exit(char *input, char *command);
+void env(void);
 
 int _printf(int fd, const char *format, ...);
 int _putchar(int fd, char c);

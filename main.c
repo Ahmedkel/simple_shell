@@ -1,5 +1,20 @@
 #include "libs.h"
 /**
+ * executable - Executes the appropriate action based on the command.
+ * @input: Pointer to the input string.
+ * @command: Pointer to the command string.
+ * Return: void
+ */
+void  executable(char *input, char *command)
+{
+	if (_strcmp(command, "exit") == 0)
+		my_exit(input, command);
+	else if (_strcmp(command, "env") == 0)
+		env();
+	else
+		run_cmd(input);
+}
+/**
  * main - Entry point of the program
  * Return: Always 0 (success)
  */
@@ -33,10 +48,8 @@ int main(void)
 			free(input);
 			continue;
 		}
-		if (_strcmp(args[0], "exit") == 0)
-			my_exit(input, args[0]);
+		executable(input, args[0]);
 		free(args[0]);
-		run_cmd(input);
 		free(input);
 		input = NULL;
 		bufsize = 0;
