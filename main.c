@@ -19,6 +19,7 @@ int main(void)
 		characters = getline(&input, &bufsize, stdin);
 		if (characters == -1)
 		{
+			free(input);
 			exit(0);
 		}
 		if (!*(input + 1))
@@ -33,11 +34,7 @@ int main(void)
 			continue;
 		}
 		if (_strcmp(args[0], "exit") == 0)
-		{
-			free(input);
-			free(args[0]);
-			exit(exit_status(0, 0));
-		}
+			my_exit(input, args[0]);
 		free(args[0]);
 		run_cmd(input);
 		free(input);
