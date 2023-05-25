@@ -23,7 +23,6 @@ void execute_command(char *command, char **args);
 void sigint_handler(int sig);
 void sigquit_handler(int sig);
 void _puts(char *str);
-int _putchar(char c);
 int _strncmp(const char *s1, const char *s2, size_t n);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
@@ -37,12 +36,12 @@ void free_2d_array(char **ptr);
 int exit_status(int action, int new_status);
 void my_exit(char *input, char *command);
 
-int _printf(const char *format, ...);
-int _putchar(char c);
-int _print_string(char *s);
+int _printf(int fd, const char *format, ...);
+int _putchar(int fd, char c);
+int _print_string(int fd, char *s);
 int _strlen(char *s);
 int _strlenc(const char *s);
-int _print_int(int num);
-int _print_unsigned_int(unsigned int num);
+int _print_int(int fd, int num);
+int _print_unsigned_int(int fd, unsigned int num);
 
 #endif
